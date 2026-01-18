@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_app/change_theme/change_theme_page.dart';
@@ -12,7 +13,9 @@ import 'provider_setProvider/pages/basic/basic_page.dart';
 import 'provider_setProvider/widgets/custom_button.dart';
 
 void main() {
-  runApp(const ProviderScope(child: MyApp()));
+  runApp(
+    DevicePreview(builder: (context) => const ProviderScope(child: MyApp())),
+  );
 }
 
 class MyApp extends ConsumerWidget {

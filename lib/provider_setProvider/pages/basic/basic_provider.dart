@@ -13,8 +13,9 @@ final ageProvider = Provider<String>((ref) {
   return "I'm $age years old";
 });
 
-@Riverpod(keepAlive: true)
-String old(OldRef ref) {
+@riverpod
+String old(Ref ref) {
   final old = ref.watch(counterProvider);
+  ref.onDispose(() => print("old Provider Dispose $old"));
   return "You are $old years old?";
 }

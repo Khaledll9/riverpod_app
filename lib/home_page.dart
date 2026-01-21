@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:riverpod_app/provider_setProvider/widgets/custom_button.dart';
 
+import 'basic/basic_page.dart';
 import 'change_theme/change_theme_page.dart';
 import 'futuer_provider/future_provider_page.dart';
 import 'notifier_provider/state_NotifierProvider/state_notifier_page.dart';
@@ -21,6 +22,7 @@ class HomePage extends StatelessWidget {
           shrinkWrap: true,
           padding: const EdgeInsets.all(20),
           children: const [
+            CustomButton(title: 'basic', child: BasicPageRiverpod()),
             CustomButton(title: 'Provider', child: BasicPage()),
             CustomButton(title: 'State Notifier 1', child: AutoDisposePage()),
 

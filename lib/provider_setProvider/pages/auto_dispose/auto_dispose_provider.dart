@@ -5,7 +5,7 @@ final autoDisposeCounterProvider = StateProvider.autoDispose<int>((ref) {
   return 0;
 });
 
-final autoDisposeAgeProvider = Provider<String>((ref) {
+final autoDisposeAgeProvider = Provider.autoDispose<String>((ref) {
   final age = ref.watch(autoDisposeCounterProvider);
   return "I'm $age years old";
 });

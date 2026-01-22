@@ -1,25 +1,15 @@
-class User {
-  final String id;
-  final String email;
-  final String firstName;
-  final String lastName;
-  final String avatar;
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:flutter/foundation.dart';
 
-  User({
-    required this.id,
-    required this.email,
-    required this.firstName,
-    required this.lastName,
-    required this.avatar,
-  });
+part 'user.freezed.dart';
+part 'user.g.dart';
 
-  factory User.formJson(Map<String, dynamic> json) {
-    return User(
-      id: json['id'],
-      email: json['email'],
-      firstName: json['firstName'],
-      lastName: json['lastName'],
-      avatar: json['avatar'],
-    );
-  }
+@freezed
+abstract class User with _$User {
+  const factory User({
+    required String gender,
+    required String email,
+    required String phone,
+  }) = _User;
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 }

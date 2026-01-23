@@ -3,7 +3,7 @@ import 'package:riverpod_app/provider_setProvider/widgets/custom_button.dart';
 
 import 'basic/basic_page.dart';
 import 'change_theme/change_theme_page.dart';
-import 'futuer_provider/pages/user/future_provider_page.dart';
+import 'future_provider/pages/user/future_provider_page.dart';
 import 'notifier_provider/state_NotifierProvider/state_notifier_page.dart';
 import 'provider_setProvider/pages/auto_dispose/auto_dispose_page.dart';
 import 'provider_setProvider/pages/basic/basic_page.dart';
